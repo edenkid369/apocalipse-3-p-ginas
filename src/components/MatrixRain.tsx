@@ -36,8 +36,8 @@ const MatrixRain = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Green text with very low opacity
-      ctx.fillStyle = 'rgba(0, 255, 65, 0.12)';
+      // Green text with higher opacity for visibility
+      ctx.fillStyle = 'rgba(0, 255, 65, 0.4)';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -68,7 +68,7 @@ const MatrixRain = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.15 }}
+      style={{ opacity: 0.4 }}
     />
   );
 };
