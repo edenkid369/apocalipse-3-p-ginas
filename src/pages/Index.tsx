@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import TypewriterText from '@/components/TypewriterText';
 import GlitchDivider from '@/components/GlitchDivider';
@@ -8,6 +8,12 @@ import OfferBox from '@/components/OfferBox';
 const Index = () => {
   const [typewriterComplete, setTypewriterComplete] = useState(false);
 
+  // Fallback: garante que o resto do texto aparece mesmo se o typewriter travar
+  useEffect(() => {
+    if (typewriterComplete) return;
+    const t = window.setTimeout(() => setTypewriterComplete(true), 4500);
+    return () => window.clearTimeout(t);
+  }, [typewriterComplete]);
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <MatrixRain />
@@ -26,9 +32,9 @@ const Index = () => {
             </h1>
           </header>
 
-          {typewriterComplete && (
-            <>
-              {/* Section 1 */}
+          <div
+            className={`transition-opacity duration-700 ${typewriterComplete ? 'opacity-100' : 'opacity-0'}`}
+          >
               <AnimatedSection>
                 <p className="mb-6">
                   Eu sei exatamente por que você comentou <span className="text-gold font-semibold">"FIM"</span>.
@@ -311,8 +317,7 @@ const Index = () => {
                 </p>
               </AnimatedSection>
 
-            </>
-          )}
+          </div>
 
         </article>
       </main>

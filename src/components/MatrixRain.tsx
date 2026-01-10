@@ -11,8 +11,12 @@ const MatrixRain = () => {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     resizeCanvas();
@@ -22,8 +26,8 @@ const MatrixRain = () => {
     const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const charArray = chars.split('');
 
-    const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
+    const fontSize = 18;
+    const columns = Math.floor(window.innerWidth / fontSize);
 
     // Array of drops - one per column
     const drops: number[] = [];
@@ -33,11 +37,11 @@ const MatrixRain = () => {
 
     const draw = () => {
       // Semi-transparent black to create fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       // Green text with higher opacity for visibility
-      ctx.fillStyle = 'rgba(0, 255, 65, 0.4)';
+      ctx.fillStyle = 'rgba(0, 255, 65, 0.55)';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -56,7 +60,7 @@ const MatrixRain = () => {
       }
     };
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, 40);
 
     return () => {
       clearInterval(interval);
@@ -68,7 +72,7 @@ const MatrixRain = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.4 }}
+      style={{ opacity: 0.55 }}
     />
   );
 };
