@@ -243,13 +243,14 @@ const Index = () => {
                   <p className="text-center text-neon font-semibold text-lg md:text-xl mb-4">
                     VEJA O APLICATIVO EM AÇÃO:
                   </p>
-                  <div className="relative rounded-lg overflow-hidden border-2 border-neon/30 shadow-[0_0_30px_rgba(0,255,65,0.2)]">
+                <div className="relative rounded-lg overflow-hidden border-2 border-neon/30 shadow-[0_0_30px_rgba(0,255,65,0.2)]">
                     <video 
                       src={demoVideo}
-                      controls
+                      autoPlay
+                      loop
+                      muted
                       playsInline
                       className="w-full h-auto max-h-[70vh] mx-auto"
-                      poster=""
                     >
                       Seu navegador não suporta o elemento de vídeo.
                     </video>
