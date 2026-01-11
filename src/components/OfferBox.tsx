@@ -181,7 +181,7 @@ const OfferBox = () => {
         className="text-center mb-8"
       >
         <p className="text-muted-foreground line-through text-2xl md:text-3xl mb-2 text-red-400/70">
-          de R$ 147
+          de R$ 186,99
         </p>
         <p 
           className="text-gold font-bold text-2xl md:text-3xl mb-4 tracking-wider animate-pulse"
