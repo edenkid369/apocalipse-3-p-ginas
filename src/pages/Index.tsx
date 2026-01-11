@@ -4,6 +4,7 @@ import TypewriterText from '@/components/TypewriterText';
 import GlitchDivider from '@/components/GlitchDivider';
 import AnimatedSection from '@/components/AnimatedSection';
 import OfferBox from '@/components/OfferBox';
+import demoVideo from '@/assets/demo-video.mp4';
 
 const Index = () => {
   const [typewriterComplete, setTypewriterComplete] = useState(false);
@@ -234,6 +235,26 @@ const Index = () => {
                 <p className="mb-6">
                   Não é mais um livro de manifestação criado por CHAT GPT. Não é mais um curso de neurociência. Não é mais uma técnica. É um <span className="text-gold font-semibold">GUIA ABSOLUTO</span> em formato de <span className="text-neon font-semibold">APLICATIVO EXCLUSIVO</span> que contém:
                 </p>
+              </AnimatedSection>
+
+              {/* Demo Video */}
+              <AnimatedSection delay={0.15}>
+                <div className="my-8 md:my-12">
+                  <p className="text-center text-neon font-semibold text-lg md:text-xl mb-4">
+                    VEJA O APLICATIVO EM AÇÃO:
+                  </p>
+                  <div className="relative rounded-lg overflow-hidden border-2 border-neon/30 shadow-[0_0_30px_rgba(0,255,65,0.2)]">
+                    <video 
+                      src={demoVideo}
+                      controls
+                      playsInline
+                      className="w-full h-auto max-h-[70vh] mx-auto"
+                      poster=""
+                    >
+                      Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                  </div>
+                </div>
               </AnimatedSection>
 
               {/* Offer Box Component */}
