@@ -1,6 +1,29 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Smartphone, MessageCircle } from 'lucide-react';
+import { Shield, Smartphone, MessageCircle, Wind, Palette, Music, BookOpen, XCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
+
+const benefits = [
+  "A estrutura exata de como a realidade funciona (não teoria, estrutura operacional)",
+  "O mecanismo completo que 99% não entende (sem palavrinhas bonitinhas)",
+  "Mais de 77 erros brutais que mantêm você na prisão mesmo depois de \"despertar\"",
+  "O reconhecimento direto de quem você realmente é (não como conceito, como experiência)",
+  "Solução para qualquer área da sua vida (financeira, relacionamentos, saúde.)",
+  "Auxílio e orientação espiritual diretamente no botão do app integrando o Whatsapp",
+  "Comunidade Espiritual gratuita com Atualizações, Mensagens e Eventos Especiais",
+  "Aplicativo Exclusivo direto na tela do seu celular",
+];
+
+const specialFeatures = [
+  { icon: Wind, text: "FERRAMENTA DE CICLOS DE RESPIRAÇÃO DENTRO DO APLICATIVO" },
+  { icon: Music, text: "PLAYER DE MÚSICA AMBIENTE INTEGRADO" },
+  { icon: Palette, text: "LEITURA ADAPTATIVA COM CORES VARIADAS" },
+];
+
+const notForYou = [
+  "Quem quer ficar preso em técnicas, imagens, rituais ou religião",
+  "Quem quer continuar buscando infinitamente",
+  "Quem quer ficar \"vibrando alto\" e esperando o momento perfeito — o que era pra viver hoje já há muito tempo",
+];
 
 const OfferBox = () => {
   const [priceRevealed, setPriceRevealed] = useState(false);
@@ -46,45 +69,68 @@ const OfferBox = () => {
         </span>
       </motion.h2>
 
+      {/* Benefits List */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="space-y-4 mb-8 text-lg"
+        className="space-y-3 mb-8"
       >
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>A estrutura exata de como a realidade funciona (não teoria, estrutura operacional)</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>O mecanismo completo que 99% não entende (sem palavrinhas bonitinhas)</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>Mais de 77 erros brutais que mantêm você na prisão mesmo depois de "despertar"</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>O reconhecimento direto de quem você realmente é (não como conceito, como experiência)</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>Solução para qualquer área da sua vida (financeira, relacionamentos, saúde.)</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>Auxílio e orientação espiritual diretamente no botão do app integrando o Whatsapp</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>Comunidade Espiritual gratuita com Atualizações, Mensagens e Eventos Especiais</span>
-        </p>
-        <p className="flex items-start gap-3">
-          <span className="text-neon text-xl">✅</span>
-          <span>Aplicativo Exclusivo direto na tela do seu celular</span>
-        </p>
+        {benefits.map((benefit, index) => (
+          <p key={index} className="flex items-start gap-3 text-lg">
+            <span className="text-neon text-xl">✅</span>
+            <span>{benefit}</span>
+          </p>
+        ))}
+      </motion.div>
+
+      {/* Special Features Cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.35 }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10"
+      >
+        {specialFeatures.map((feature, index) => (
+          <div
+            key={index}
+            className="relative bg-gradient-to-br from-black via-card to-black border border-neon/40 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(0,255,65,0.15)] hover:shadow-[0_0_30px_rgba(0,255,65,0.3)] transition-all duration-300 hover:scale-[1.02]"
+          >
+            <feature.icon className="w-10 h-10 text-neon mx-auto mb-4" />
+            <p 
+              className="text-neon font-bold text-sm tracking-wider leading-tight"
+              style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+            >
+              {feature.text}
+            </p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Not For You Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.38 }}
+        className="mb-10 p-6 border border-destructive/40 rounded-lg bg-destructive/5"
+      >
+        <h3 
+          className="text-lg md:text-xl font-bold text-destructive mb-4 text-center tracking-wide"
+          style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+        >
+          ⚠️ ESSE APP NÃO É PRA:
+        </h3>
+        <div className="space-y-3">
+          {notForYou.map((item, index) => (
+            <p key={index} className="flex items-start gap-3 text-foreground/80">
+              <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
+              <span>{item}</span>
+            </p>
+          ))}
+        </div>
       </motion.div>
 
       {/* Problem Section - Before Price */}
