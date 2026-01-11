@@ -282,11 +282,6 @@ const Index = () => {
                 </p>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.1}>
-                <p className="mb-8 text-lg text-muted-foreground">
-                  Eu não sou GURU ou SUPER HERÓI. Eu sou alguém que <span className="text-neon font-semibold">ACABA com a sua ilusão</span>. E se você não está disposto a pagar o preço de um LANCHE pra isso, eu te desejo uma boa sorte na sua Jornada.
-                </p>
-              </AnimatedSection>
 
               <GlitchDivider />
 
@@ -334,8 +329,8 @@ const Index = () => {
 
               {/* P.S Section */}
               <AnimatedSection>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  <span className="text-gold font-semibold">P.S:</span> Mesmo que você não compre agora, fica comigo. No meu perfil tem conteúdo que ninguém mais fala. Conteúdo que vai destruir ilusões, que vai te fazer questionar tudo, que vai te mostrar verdades que a indústria espiritual esconde. Eu não tô aqui pra vender curso. Eu tô aqui pra acabar com a busca. E se você acompanhar, você vai perceber que esse perfil é diferente de tudo que você já viu. <span className="text-neon font-semibold">Mas se eu fosse você eu aproveitava esse cupom, porque vai acabar.</span>
+                <p className="text-foreground text-base leading-relaxed">
+                  <span className="text-gold font-bold text-lg">P.S:</span> Mesmo que você não compre agora, fica comigo. No meu perfil tem conteúdo que ninguém mais fala. Conteúdo que vai destruir ilusões, que vai te fazer questionar tudo, que vai te mostrar verdades que a indústria espiritual esconde. Eu não tô aqui pra vender curso. Eu tô aqui pra acabar com a busca. E se você acompanhar, você vai perceber que esse perfil é diferente de tudo que você já viu. <span className="text-neon font-bold">Mas se eu fosse você eu aproveitava esse cupom, porque vai acabar.</span>
                 </p>
               </AnimatedSection>
 
