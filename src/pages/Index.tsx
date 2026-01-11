@@ -20,7 +20,7 @@ const Index = () => {
       <MatrixRain />
       
       <main className="relative z-10 px-4 py-12 md:py-20">
-        <article className="max-w-3xl mx-auto bg-black/75 backdrop-blur-sm rounded-lg px-6 md:px-12 py-8 md:py-12 text-lg md:text-xl leading-relaxed">
+        <article className="max-w-3xl mx-auto bg-black/85 backdrop-blur-sm rounded-lg px-6 md:px-12 py-8 md:py-12 text-xl md:text-2xl leading-relaxed text-foreground drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           
           {/* Opening - Typewriter Effect */}
           <header className="mb-12 md:mb-16">
