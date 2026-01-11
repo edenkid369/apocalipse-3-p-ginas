@@ -18,8 +18,8 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground relative">
       <MatrixRain />
       
-      <main className="relative z-10 px-6 py-16 md:py-24">
-        <article className="max-w-[800px] mx-auto font-serif text-lg md:text-xl leading-relaxed">
+      <main className="relative z-10 px-4 py-12 md:py-20">
+        <article className="max-w-3xl mx-auto bg-black/75 backdrop-blur-sm rounded-lg px-6 md:px-12 py-8 md:py-12 text-lg md:text-xl leading-relaxed">
           
           {/* Opening - Typewriter Effect */}
           <header className="mb-12 md:mb-16">
