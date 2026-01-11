@@ -14,7 +14,7 @@ const benefits = [
 ];
 
 const specialFeatures = [
-  { icon: Wind, text: "FERRAMENTA DE CICLOS DE RESPIRAÇÃO DENTRO DO APLICATIVO" },
+  { icon: Wind, text: "FERRAMENTA DE CICLOS DE RESPIRAÇÃO (AMPLIFICADOR DE OXIGÊNIO)" },
   { icon: Music, text: "PLAYER DE MÚSICA AMBIENTE INTEGRADO" },
   { icon: Palette, text: "LEITURA ADAPTATIVA COM CORES VARIADAS" },
 ];
@@ -144,13 +144,15 @@ const OfferBox = () => {
         <h3 className="text-xl md:text-2xl font-bold text-gold mb-4 text-center">
           MAS TEM UM PROBLEMA
         </h3>
+        <p className="text-foreground/90 text-center leading-relaxed mb-4">
+          Isso <strong className="text-foreground">não deveria custar R$ 97</strong>, muito menos ser comparado a cursos de R$ 5 mil. 
+          É algo <strong className="text-foreground">visceral</strong>, feito para quem <strong className="text-foreground">parou de fingir</strong> que já é algo. 
+          Vou manter esta <strong className="text-gold">condição especial por tempo limitado</strong>, antes de tirar do ar.
+        </p>
         <p className="text-foreground/90 text-center leading-relaxed">
-          Isso não deveria custar R$ 97, muito menos ser comparado a cursos de R$ 5 mil. 
-          É algo visceral, feito para quem parou de fingir que já é algo. 
-          Vou manter esta condição especial por tempo limitado, antes de tirar do ar. 
-          Eu não sou GURU ou SUPER HERÓI. Eu sou alguém que <span className="text-neon font-semibold">ACABA com a sua ilusão</span>. 
-          Se você não está disposto a pagar o preço de um lanche por isso, 
-          desejo sinceramente boa sorte na sua busca infinita.
+          <strong className="text-foreground">Eu não sou GURU ou SUPER HERÓI.</strong> Eu sou alguém que <span className="text-neon font-bold">ACABA com a sua ilusão</span>. 
+          Se você não está disposto a pagar <strong className="text-foreground">o preço de um lanche</strong> por isso, 
+          desejo sinceramente <strong className="text-gold">boa sorte na sua busca infinita</strong>.
         </p>
       </motion.div>
 
@@ -178,6 +180,12 @@ const OfferBox = () => {
         transition={{ delay: 0.45 }}
         className="text-center mb-8"
       >
+        <p 
+          className="text-gold font-bold text-2xl md:text-3xl mb-4 tracking-wider"
+          style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+        >
+          ⚡ POR APENAS:
+        </p>
         <p className="text-muted-foreground line-through text-3xl md:text-4xl mb-4 text-red-400/70">
           R$ 147
         </p>
