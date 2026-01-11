@@ -265,26 +265,8 @@ const Index = () => {
 
               {/* Section 6 - Urgência */}
               <AnimatedSection>
-                <h2 className="text-2xl md:text-3xl font-bold text-gold mb-8">
-                  MAS TEM UM PROBLEMA
-                </h2>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1}>
-                <p className="mb-6">
-                  Eu não sei por quanto tempo vou manter isso disponível. Não porque eu quero criar escassez artificial. Mas porque a profundidade disso não cabe em produto comercial. Isso não é algo que eu deveria vender por R$ 97. Isso é algo que mestres cobram <span className="text-neon font-semibold">R$ 5 mil</span> pra ensinar (E a comunidade PAGA).
-                </p>
-                <p className="mb-6">
-                  Mas eu quero que chegue em quem realmente precisa. Em quem tá exausto. Em quem já tentou tudo. Em quem tá pronto pra parar de fingir.
-                </p>
-                <p className="mb-6">
-                  Então eu tô liberando agora, só pra quem leu até aqui por <span className="text-gold font-semibold text-2xl">R$ 47</span>. Mas só por tempo limitado. Porque em breve eu vou tirar do ar ou aumentar o preço. Não pra criar urgência. Mas porque isso não foi feito pra ser produto.
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1}>
-                <p className="mb-8 text-lg text-muted-foreground">
-                  Eu não sou GURU ou SUPER HERÓI. Eu sou alguém que <span className="text-neon font-semibold">ACABA com a sua ilusão</span>. E se você não está disposto a pagar o preço de um LANCHE pra isso, eu te desejo uma boa sorte na sua Jornada.
+                <p className="mb-6 text-lg">
+                  Eu tô liberando essa <span className="text-gold font-semibold">condição especial</span> apenas pra quem leu até aqui. Mas só por tempo limitado. Porque em breve eu vou tirar do ar ou aumentar o preço.
                 </p>
               </AnimatedSection>
 
@@ -334,8 +316,8 @@ const Index = () => {
 
               {/* P.S Section */}
               <AnimatedSection>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  <span className="text-gold font-semibold">P.S:</span> Mesmo que você não compre agora, fica comigo. No meu perfil tem conteúdo que ninguém mais fala. Conteúdo que vai destruir ilusões, que vai te fazer questionar tudo, que vai te mostrar verdades que a indústria espiritual esconde. Eu não tô aqui pra vender curso. Eu tô aqui pra acabar com a busca. E se você acompanhar, você vai perceber que esse perfil é diferente de tudo que você já viu. <span className="text-neon font-semibold">Mas se eu fosse você eu aproveitava esse cupom, porque vai acabar.</span>
+                <p className="text-foreground text-lg md:text-xl leading-relaxed font-medium drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                  <span className="text-gold font-bold text-xl md:text-2xl">P.S:</span> Mesmo que você não compre agora, fica comigo. No meu perfil tem conteúdo que ninguém mais fala. Conteúdo que vai destruir ilusões, que vai te fazer questionar tudo, que vai te mostrar verdades que a indústria espiritual esconde. Eu não tô aqui pra vender curso. Eu tô aqui pra acabar com a busca. E se você acompanhar, você vai perceber que esse perfil é diferente de tudo que você já viu. <span className="text-neon font-bold text-xl md:text-2xl">Mas se eu fosse você eu aproveitava esse cupom, porque vai acabar.</span>
                 </p>
               </AnimatedSection>
 
